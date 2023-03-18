@@ -1,5 +1,5 @@
 interface Account {
-    id: string;
+    accountNumber: string;
     type: string;
     balance: number;
 }
@@ -11,5 +11,6 @@ export interface Customer {
     email: string;
     gender: string;
     address: string;
+    image: string;
     account: Account;    
 }
