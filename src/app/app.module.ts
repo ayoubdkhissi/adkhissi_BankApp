@@ -9,6 +9,7 @@ import { CustomerCardComponent } from './customer-card/customer-card.component';
 import { CustomersListComponent } from './customers-list/customers-list.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HttpClientModule } from '@angular/common/http';
+import { CustomerFormComponent } from './customer-form/customer-form.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HttpClientModule } from '@angular/common/http';
     NavBarComponent,
     FooterComponent,
     CustomerCardComponent,
-    CustomersListComponent
+    CustomersListComponent,
+    CustomerFormComponent
   ],
   imports: [
     BrowserModule,

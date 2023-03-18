@@ -1,3 +1,7 @@
+<div class="my-5 mx-20">
+    <input (input)="onSearch($event)"  type="text" class="h-10 p-2 border-2 w-full border-gray-300 rounded-lg" placeholder="Search for a customer">
+</div>
+
 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mx-5 mt-4">
     <app-customer-card *ngFor="let customer of customers" [customer]="customer"></app-customer-card>
 </div>

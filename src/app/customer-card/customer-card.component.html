@@ -9,8 +9,14 @@
             </h1>
     
             <p class="text-gray-500">
-                Gender : {{customer?.gender}}
-                <i class="fa fa fa-mars"></i>
+                Gender :
+                <span>
+                    {{customer?.gender}}
+                </span> 
+
+                <i *ngIf="customer?.gender === 'Male' " class="fa fa-mars"></i>
+                <i *ngIf="customer?.gender !== 'Male' " class="fa fa-venus"></i>
+
             </p>
     
             <p class="text-blue-500">

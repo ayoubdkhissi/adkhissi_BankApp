@@ -13,8 +13,18 @@ export class CustomerService {
 
   constructor(private httpClient: HttpClient) { }
 
-  getCustomers() : Observable<Customer[]> {
+  public getCustomers() : Observable<Customer[]> {
     let url = `${API_URL}`;
     return this.httpClient.get<Customer[]>(url);
+  }
+
+  public searchCustomers(searchTerm: string) : Observable<Customer[]> {
+    let url = `${API_URL}?q=${searchTerm}`;
+    return this.httpClient.get<Customer[]>(url);
+  }
+
+  public getCustomerById(id: string) : Observable<Customer> {
+    let url = `${API_URL}/${id}`;
+    return this.httpClient.get<Customer>(url);
   }
 }
