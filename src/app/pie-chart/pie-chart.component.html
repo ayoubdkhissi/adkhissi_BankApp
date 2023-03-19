@@ -1,0 +1,24 @@
+<div class="flex flex-col">
+    <div class="">
+      <div class="border shadow rounded-lg">
+        <div class="py-3 px-6 mb-0  border-b-1 bg-slate-200">
+          <h5 class="mb-3 text-xl text-center font-bold">{{data?.chartTitle}}</h5>
+          <p class="text-center text-gray-600">{{data?.chartSubTitle}}</p>
+        </div>
+        <div class="flex-auto p-6 ">
+          <canvas [id]="data?.chartId"></canvas>
+
+        </div>
+        <div class="py-3 px-6 bg-gray-200 border-t-1 border-gray-300 ">
+          <div class="legend">
+            <i class="fa fa-circle text-green-500"></i> {{data?.data1Name}}
+            <i class="fa fa-circle text-blue-500"></i> {{data?.data2Name}}
+          </div>
+          <hr>
+          <div class="stats">
+            <i class="fa fa-database"></i> {{data?.chartDescription}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
