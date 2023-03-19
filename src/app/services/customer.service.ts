@@ -27,4 +27,11 @@ export class CustomerService {
     let url = `${API_URL}/${id}`;
     return this.httpClient.get<Customer>(url);
   }
+
+  public addCustomer(customer: Customer) : Observable<Customer> {
+    let url = `${API_URL}`;
+    return this.httpClient.post<Customer>(url, customer);
+  }
+
+
 }
