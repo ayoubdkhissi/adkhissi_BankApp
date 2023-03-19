@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { CustomerValidationService } from '../customer-validation.service';
 import { Customer } from '../interfaces/customer.interface';
 import { CustomerService } from '../services/customer.service';
 
@@ -23,16 +24,17 @@ export class CustomerFormComponent implements OnInit {
   constructor(private route: ActivatedRoute,
     private customerService: CustomerService,
     private router: Router,
-    private formBuilder: FormBuilder) {
+    private formBuilder: FormBuilder,
+    private customerValidationService: CustomerValidationService) {
 
     this.customerForm = this.formBuilder.group({
-      firstName: [''],
-      lastName: [''],
-      email: [''],
-      address: [''],
-      gender: [''],
-      accountType: [''],
-      balance: ['']
+      firstName: ['', this.customerValidationService.validateFirstName()],
+      lastName: ['', this.customerValidationService.validateLastName()],
+      email: ['', this.customerValidationService.validateEmail()],
+      address: ['', this.customerValidationService.validateAddress()],
+      gender: ['Male', this.customerValidationService.validateGender()],
+      accountType: ['Savings', this.customerValidationService.validateAccountType()],
+      balance: ['', this.customerValidationService.validateBalance()]
     });
   }
 
@@ -57,13 +59,13 @@ export class CustomerFormComponent implements OnInit {
                   this.customer = customer;
 
                   this.customerForm = this.formBuilder.group({
-                    firstName: [this.customer?.firstName],
-                    lastName: [this.customer?.lastName],
-                    email: [this.customer?.email],
-                    address: [this.customer?.address],
-                    gender: [this.customer?.gender],
-                    accountType: [this.customer?.account.type],
-                    balance: [this.customer?.account.balance]
+                    firstName: [this.customer?.firstName, this.customerValidationService.validateFirstName()],
+                    lastName: [this.customer?.lastName, this.customerValidationService.validateLastName()],
+                    email: [this.customer?.email, this.customerValidationService.validateEmail()],
+                    address: [this.customer?.address, this.customerValidationService.validateAddress()],
+                    gender: [this.customer?.gender, this.customerValidationService.validateGender()],
+                    accountType: [this.customer?.account.type, this.customerValidationService.validateAccountType()],
+                    balance: [this.customer?.account.balance, this.customerValidationService.validateBalance()]
                   });
                 },
                 error: (err) => {
@@ -161,6 +163,10 @@ export class CustomerFormComponent implements OnInit {
     // generate a random string in the following format: "78569874512658"
     let randomString = Math.floor(Math.random() * 100000000000000).toString();
     return randomString;
+  }
+
+  public getControl(controlName: string) {
+    return this.customerForm.get(controlName);
   }
 
 }

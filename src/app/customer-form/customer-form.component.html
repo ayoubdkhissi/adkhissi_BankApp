@@ -6,21 +6,64 @@
         <div class="flex flex-col">
             <label for="firstName" class="mx-auto font-bold">First Name</label>
             <input formControlName="firstName" type="text" id="firstName" placeholder="First Name" class="border border-gray-300 shadow  rounded-sm p-1 w-full">
+            
+            <!-- Static Validation -->
+            <small>
+                <span *ngIf="getControl('firstName')?.hasError('required') && getControl('firstName')?.touched" class="text-red-500">First Name is required</span>
+            </small>
+            <small>
+                <span *ngIf="getControl('firstName')?.hasError('minlength') && getControl('firstName')?.touched" class="text-red-500">First Name must be at least 3 characters</span>
+            </small>
+            <small>
+                <span *ngIf="getControl('firstName')?.hasError('maxlength') && getControl('firstName')?.touched" class="text-red-500">First Name must be at most 20 characters</span>
+            </small>
         </div>
 
         <div class="flex flex-col">
             <label for="lastName" class="mx-auto font-bold">Last Name</label>
             <input formControlName="lastName" type="text" id="lastName" placeholder="Last Name" class="border border-gray-300 shadow rounded-sm p-1 w-full">
+            
+            <!-- Static Validation -->
+            <small>
+                <span *ngIf="getControl('lastName')?.hasError('required') && getControl('lastName')?.touched" class="text-red-500">Last Name is required</span>
+            </small>
+            <small>
+                <span *ngIf="getControl('lastName')?.hasError('minlength') && getControl('lastName')?.touched" class="text-red-500">Last Name must be at least 3 characters</span>
+            </small>
+            <small>
+                <span *ngIf="getControl('lastName')?.hasError('maxlength') && getControl('lastName')?.touched" class="text-red-500">Last Name must be at most 20 characters</span>
+            </small>
+
         </div>
 
         <div class="flex flex-col">
             <label for="email" class="mx-auto font-bold">Email</label>
             <input formControlName="email" type="email" id="email" placeholder="Email" class="border border-gray-300 shadow rounded-sm p-1 w-full">
+            
+            <!-- Static Validation -->
+            <small>
+                <span *ngIf="getControl('email')?.hasError('required') && getControl('email')?.touched" class="text-red-500">Email is required</span>
+            </small>
+            <small>
+                <span *ngIf="getControl('email')?.hasError('email') && getControl('email')?.touched" class="text-red-500">Email is invalid</span>
+            </small>
         </div>
 
         <div class="flex flex-col">
             <label for="address" class="mx-auto font-bold">Address</label>
             <input formControlName="address" type="text" id="address" placeholder="Address" class="border border-gray-300 shadow rounded-sm p-1 w-full">
+            
+            <!-- Static Validation -->
+            <small>
+                <span *ngIf="getControl('address')?.hasError('required') && getControl('address')?.touched" class="text-red-500">Address is required</span>
+            </small>
+            <small>
+                <span *ngIf="getControl('address')?.hasError('minlength') && getControl('address')?.touched" class="text-red-500">Address must be at least 3 characters</span>
+            </small>
+            <small>
+                <span *ngIf="getControl('address')?.hasError('maxlength') && getControl('address')?.touched" class="text-red-500">Address must be at most 50 characters</span>
+            </small>
+
         </div>
 
             
@@ -53,6 +96,17 @@
         <div class="flex flex-col">
             <label for="balance" class="mx-auto font-bold">Balance</label>
             <input formControlName="balance" type="number" id="balance" placeholder="Balance" class="border border-gray-300 shadow  rounded-sm p-1 w-full">
+
+            <!-- Static Validation -->
+            <small>
+                <span *ngIf="getControl('balance')?.hasError('required') && getControl('balance')?.touched" class="text-red-500">Balance is required</span>
+            </small>
+            <small>
+                <span *ngIf="getControl('balance')?.hasError('min') && getControl('balance')?.touched" class="text-red-500">Balance must be at least 0</span>
+            </small>
+            <small>
+                <span *ngIf="getControl('balance')?.hasError('max') && getControl('balance')?.touched" class="text-red-500">Balance must be at most 1000000</span>
+            </small>
         </div>
 
         <div class="mx-auto">
