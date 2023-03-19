@@ -3,29 +3,29 @@
     <h1 class="text-3xl font-bold m-8">Adding a New Customer</h1>
     
     <form [formGroup]="customerForm" (ngSubmit)="submit()" class="flex flex-col gap-3">
-        <div>
-            <label for="firstName">First Name</label>
-            <input formControlName="firstName" type="text" id="firstName" placeholder="First Name" class="border border-gray-300 shadow  ml-3 rounded-sm p-1">
+        <div class="flex flex-col">
+            <label for="firstName" class="mx-auto font-bold">First Name</label>
+            <input formControlName="firstName" type="text" id="firstName" placeholder="First Name" class="border border-gray-300 shadow  rounded-sm p-1 w-full">
         </div>
 
-        <div>
-            <label for="lastName">Last Name</label>
-            <input formControlName="lastName" type="text" id="lastName" placeholder="Last Name" class="border border-gray-300 shadow ml-3 rounded-sm p-1">
+        <div class="flex flex-col">
+            <label for="lastName" class="mx-auto font-bold">Last Name</label>
+            <input formControlName="lastName" type="text" id="lastName" placeholder="Last Name" class="border border-gray-300 shadow rounded-sm p-1 w-full">
         </div>
 
-        <div>
-            <label for="email">Email</label>
-            <input formControlName="email" type="email" id="email" placeholder="Email" class="border border-gray-300 shadow ml-14 rounded-sm p-1">
+        <div class="flex flex-col">
+            <label for="email" class="mx-auto font-bold">Email</label>
+            <input formControlName="email" type="email" id="email" placeholder="Email" class="border border-gray-300 shadow rounded-sm p-1 w-full">
         </div>
 
-        <div>
-            <label for="address">Address</label>
-            <input formControlName="address" type="text" id="address" placeholder="Address" class="border border-gray-300 shadow ml-8 rounded-sm p-1">
+        <div class="flex flex-col">
+            <label for="address" class="mx-auto font-bold">Address</label>
+            <input formControlName="address" type="text" id="address" placeholder="Address" class="border border-gray-300 shadow rounded-sm p-1 w-full">
         </div>
 
             
         <div class="flex gap-6 ">
-            <label>Gender</label>
+            <label class="font-bold">Gender</label>
             <div class="flex">
                 <label for="male" class="mx-2">Male</label>
                 <input formControlName="gender" class="mt-1" type="radio" value="Male" checked id="male">
@@ -38,7 +38,7 @@
         </div>
 
         <div class="flex gap-6 ">
-            <label>Account</label>
+            <label class="font-bold">Account</label>
             <div class="flex">
                 <label for="savings" class="mr-2">Savings</label>
                 <input formControlName="accountType" class="mt-1" type="radio" value="Savings" checked id="savings">
@@ -50,9 +50,9 @@
             </div>
         </div>
 
-        <div>
-            <label for="balance">Balance</label>
-            <input formControlName="balance" type="number" id="balance" placeholder="Balance" class="border border-gray-300 shadow ml-8  rounded-sm p-1">
+        <div class="flex flex-col">
+            <label for="balance" class="mx-auto font-bold">Balance</label>
+            <input formControlName="balance" type="number" id="balance" placeholder="Balance" class="border border-gray-300 shadow  rounded-sm p-1 w-full">
         </div>
 
         <div class="mx-auto">

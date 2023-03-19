@@ -28,7 +28,7 @@ export class CustomerFormComponent implements OnInit {
     this.customerForm = this.formBuilder.group({
       firstName: [''],
       lastName: [''],
-      email: ['', ],
+      email: [''],
       address: [''],
       gender: [''],
       accountType: [''],
@@ -55,6 +55,16 @@ export class CustomerFormComponent implements OnInit {
               .subscribe({
                 next: (customer) => {
                   this.customer = customer;
+
+                  this.customerForm = this.formBuilder.group({
+                    firstName: [this.customer?.firstName],
+                    lastName: [this.customer?.lastName],
+                    email: [this.customer?.email],
+                    address: [this.customer?.address],
+                    gender: [this.customer?.gender],
+                    accountType: [this.customer?.account.type],
+                    balance: [this.customer?.account.balance]
+                  });
                 },
                 error: (err) => {
                   this.router.navigate(['notFound']);
@@ -86,7 +96,7 @@ export class CustomerFormComponent implements OnInit {
         account: {
           accountNumber: this.generateRandomAccountNumber(),
           type: this.customerForm.value.accountType,
-          balance: this.customerForm.value.accountBalance
+          balance: parseFloat(this.customerForm.value.balance)
         }
       };
 
@@ -97,8 +107,32 @@ export class CustomerFormComponent implements OnInit {
           this.router.navigate(['']);
         }
       });
-
     }
+
+    else {
+      // update customer
+      let customer: Customer = {
+        id: this.customer?.id as string,
+        firstName: this.customerForm.value.firstName,
+        lastName: this.customerForm.value.lastName,
+        email: this.customerForm.value.email,
+        address: this.customerForm.value.address,
+        gender: this.customerForm.value.gender,
+        image: this?.customer?.image as string,
+        account: {
+          accountNumber: this.customer?.account.accountNumber as string,
+          type: this.customerForm.value.accountType,
+          balance: parseFloat(this.customerForm.value.balance)
+        }
+      };
+
+      this.customerService.updateCustomer(customer).subscribe({
+        next: () => {
+          this.router.navigate(['']);
+        }
+      });
+    }
+
   }
 
   private generateRandomId(): string {
@@ -109,19 +143,11 @@ export class CustomerFormComponent implements OnInit {
       return v.toString(16);
     });
 
-    // check if the random string is already used
-    this.customerService.getCustomerById(randomString).subscribe({
-      next: (c) => {
-        // if the id is already used, try generate a new one
-        if (c) {
-          this.generateRandomId();
-        }
-      },
-      error: (err) => {
-        // if the id is not used, return the random string
-        return randomString;
-      }
-    });
+    /*
+      PS1: Normally, I would use a library like uuid to generate a random string, but I wanted to show you how to do it manually.
+      PS2: I know that this is not the best way to generate a random string, but it is good enough for this example.
+      PS3: Normally, we should check if the generated string is unique, but the chances of generating the same string twice are very very low.
+    */
 
     return randomString;
   }

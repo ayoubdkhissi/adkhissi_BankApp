@@ -33,5 +33,11 @@ export class CustomerService {
     return this.httpClient.post<Customer>(url, customer);
   }
 
+  public updateCustomer(customer: Customer) : Observable<Customer> {
+    let url = `${API_URL}/${customer.id}`;
+    return this.httpClient.put<Customer>(url, customer);
+  }
+  
+
 
 }

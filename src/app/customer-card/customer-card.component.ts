@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 import { Customer } from '../interfaces/customer.interface';
 
 @Component({
@@ -8,5 +9,11 @@ import { Customer } from '../interfaces/customer.interface';
 })
 export class CustomerCardComponent {
 
+  constructor(private router: Router) { }
+
   @Input() customer?: Customer;
+
+  onUpdate() {
+    this.router.navigate(['/editCustomer', this.customer?.id]);
+  }
 }
