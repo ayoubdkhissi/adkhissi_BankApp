@@ -18,9 +18,9 @@
       "id": "c25605e0-429a-4ac2-8304-56a1b9819e37",
       "firstName": "Pooh",
       "lastName": "Maliphant",
-      "email": "pmaliphant1@illinois.edu",
-      "gender": "Male",
+      "email": "pmaliphant@gmail.com",
       "address": "1 Ilene Road",
+      "gender": "Male",
       "image": "https://robohash.org/autemquodvoluptatem.png?size=100x100&set=set2",
       "account": {
         "accountNumber": "78958758485964",
@@ -32,9 +32,9 @@
       "id": "ca32646f-e09e-462d-b1e5-76cd9eb16d87",
       "firstName": "Charla",
       "lastName": "Courteney",
-      "email": "ccourteney2@nih.gov",
-      "gender": "Genderfluid",
+      "email": "ccourteney2@nih.govvv",
       "address": "37 Dapin Point",
+      "gender": "Male",
       "image": "https://robohash.org/autemquodvoluptatem.png?size=100x100&set=set3",
       "account": {
         "accountNumber": "78549625896587",
@@ -47,8 +47,8 @@
       "firstName": "Bogey",
       "lastName": "Stothard",
       "email": "bstothard3@theatlantic.com",
-      "gender": "Male",
       "address": "58 Pleasure Point",
+      "gender": "Male",
       "image": "https://robohash.org/autemquodvoluptatem.png?size=100x100&set=set4",
       "account": {
         "accountNumber": "15975365485258",
@@ -299,7 +299,7 @@
       "firstName": "Aggie",
       "lastName": "Alleyne",
       "email": "aalleynel@cbsnews.com",
-      "gender": "Genderfluid",
+      "gender": "Male",
       "address": "4 Oneill Hill",
       "image": "https://robohash.org/adkhissi55.png?size=100x100&set=set4",
       "account": {

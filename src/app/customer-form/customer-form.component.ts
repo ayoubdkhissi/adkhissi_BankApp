@@ -28,13 +28,33 @@ export class CustomerFormComponent implements OnInit {
     private customerValidationService: CustomerValidationService) {
 
     this.customerForm = this.formBuilder.group({
-      firstName: ['', this.customerValidationService.validateFirstName()],
-      lastName: ['', this.customerValidationService.validateLastName()],
-      email: ['', this.customerValidationService.validateEmail()],
-      address: ['', this.customerValidationService.validateAddress()],
-      gender: ['Male', this.customerValidationService.validateGender()],
-      accountType: ['Savings', this.customerValidationService.validateAccountType()],
-      balance: ['', this.customerValidationService.validateBalance()]
+      firstName: ['',
+        this.customerValidationService.validateFirstName(),
+        []],
+
+      lastName: ['', 
+        this.customerValidationService.validateLastName(),
+        []],
+
+      email: ['', 
+        this.customerValidationService.validateEmail(),
+        this.customerValidationService.validateEmailNotTaken.bind(this)],
+      
+      address: ['', 
+        this.customerValidationService.validateAddress(),
+        []],
+      
+      gender: ['Male', 
+        this.customerValidationService.validateGender(),
+        []],
+      
+      accountType: ['Savings',
+        this.customerValidationService.validateAccountType(),
+        []],
+      
+      balance: ['', 
+        this.customerValidationService.validateBalance(),
+        []]
     });
   }
 
@@ -61,7 +81,9 @@ export class CustomerFormComponent implements OnInit {
                   this.customerForm = this.formBuilder.group({
                     firstName: [this.customer?.firstName, this.customerValidationService.validateFirstName()],
                     lastName: [this.customer?.lastName, this.customerValidationService.validateLastName()],
-                    email: [this.customer?.email, this.customerValidationService.validateEmail()],
+                    email: [this.customer?.email,
+                        this.customerValidationService.validateEmail(),
+                        this.customerValidationService.validateEmailNotTakenInUpdateMode.bind(this, this.customer?.email)],
                     address: [this.customer?.address, this.customerValidationService.validateAddress()],
                     gender: [this.customer?.gender, this.customerValidationService.validateGender()],
                     accountType: [this.customer?.account.type, this.customerValidationService.validateAccountType()],
@@ -138,7 +160,7 @@ export class CustomerFormComponent implements OnInit {
   }
 
   private generateRandomId(): string {
-    
+
     // Generate a random string in the following format: "a0299050-7a99-4eab-8d42-d0bce08f0e85"
     let randomString = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
       var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);

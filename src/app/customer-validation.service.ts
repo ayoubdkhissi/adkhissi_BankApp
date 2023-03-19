@@ -1,12 +1,15 @@
 import { Injectable } from '@angular/core';
 import { AbstractControl, Validators } from '@angular/forms';
+import { map, Observable } from 'rxjs';
+import { Customer } from './interfaces/customer.interface';
+import { CustomerService } from './services/customer.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CustomerValidationService {
 
-  constructor() { }
+  constructor(private customerService: CustomerService) { }
 
   public validateFirstName() {
     
@@ -70,4 +73,34 @@ export class CustomerValidationService {
     ]
     return abstractControls;
   }
+
+
+  public validateEmailNotTaken(
+    control: AbstractControl
+  ): Observable<{ emailExists: boolean } | null> {
+    return this.customerService.getCustomersByEmail(control.value).pipe(
+      map((customers: Customer[]) => {
+        if (customers.length>0) {
+          return { emailExists: true };
+        }
+        return null;
+      })
+    );
+  }
+
+  // validate email not taken but in update mode
+  public validateEmailNotTakenInUpdateMode(
+    oldEmail: string,
+    control: AbstractControl
+  ): Observable<{ emailExists: boolean } | null> {
+    return this.customerService.getCustomersByEmail(control.value).pipe(
+      map((customers: Customer[]) => {
+        if (customers.length>0 && customers[0].email !== oldEmail) {
+          return { emailExists: true };
+        }
+        return null;
+      })
+    );
+  }
+
 }

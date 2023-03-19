@@ -47,6 +47,11 @@
             <small>
                 <span *ngIf="getControl('email')?.hasError('email') && getControl('email')?.touched" class="text-red-500">Email is invalid</span>
             </small>
+
+            <!-- Asynchronous Validation -->
+            <small>
+                <span *ngIf="getControl('email')?.hasError('emailExists') && getControl('email')?.touched" class="text-red-500">Email already exists</span>
+            </small>
         </div>
 
         <div class="flex flex-col">
