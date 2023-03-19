@@ -43,6 +43,9 @@ export class CustomerService {
     return this.httpClient.put<Customer>(url, customer);
   }
   
-
+  public deleteCustomer(id: string) : Observable<any> {
+    let url = `${API_URL}/${id}`;
+    return this.httpClient.delete<any>(url);
+  }
 
 }

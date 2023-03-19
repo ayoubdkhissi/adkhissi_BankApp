@@ -1,34 +1,6 @@
 {
   "customers": [
     {
-      "id": "2da6cbc8-3240-4bc8-b31c-60f62564fe37",
-      "firstName": "Reagan",
-      "lastName": "Courtese",
-      "email": "1999dkhissi@gmail.com",
-      "address": "886 Barby Point",
-      "gender": "Female",
-      "image": "https://robohash.org/f4f988ee-b206-497e-802c-d932b388db6d.png?size=100x100&set=set1",
-      "account": {
-        "accountNumber": "33913253688747",
-        "type": "Checking",
-        "balance": 1200
-      }
-    },
-    {
-      "id": "c25605e0-429a-4ac2-8304-56a1b9819e37",
-      "firstName": "Pooh",
-      "lastName": "Maliphant",
-      "email": "pmaliphant@gmail.com",
-      "address": "1 Ilene Road",
-      "gender": "Male",
-      "image": "https://robohash.org/autemquodvoluptatem.png?size=100x100&set=set2",
-      "account": {
-        "accountNumber": "78958758485964",
-        "type": "Savings",
-        "balance": 2000
-      }
-    },
-    {
       "id": "ca32646f-e09e-462d-b1e5-76cd9eb16d87",
       "firstName": "Charla",
       "lastName": "Courteney",
@@ -75,8 +47,8 @@
       "firstName": "Felicity",
       "lastName": "Dayton",
       "email": "fdayton5@sohu.com",
-      "gender": "Female",
       "address": "27553 Coleman Street",
+      "gender": "Female",
       "image": "https://robohash.org/autemquodvoluptatem.png?size=100x100&set=set6",
       "account": {
         "accountNumber": "78569874523658",
@@ -267,48 +239,6 @@
       }
     },
     {
-      "id": "0baa41e1-cc21-4a8d-b85a-e4abbe96495e",
-      "firstName": "Gina",
-      "lastName": "Ireson",
-      "email": "giresonj@ask.com",
-      "gender": "Non-binary",
-      "address": "75 Sauthoff Court",
-      "image": "https://robohash.org/adkhissi53.png?size=100x100&set=set2",
-      "account": {
-        "accountNumber": "78569874512658",
-        "type": "Savings",
-        "balance": 20000
-      }
-    },
-    {
-      "id": "0c0d59ce-7b8b-4c62-b0b1-2caad8db91ca",
-      "firstName": "Diarmid",
-      "lastName": "O'Dee",
-      "email": "dodeek@bigcartel.com",
-      "gender": "Agender",
-      "address": "03 Old Shore Drive",
-      "image": "https://robohash.org/adkhissi54.png?size=100x100&set=set3",
-      "account": {
-        "accountNumber": "78569874513658",
-        "type": "Checking",
-        "balance": 21000
-      }
-    },
-    {
-      "id": "e7f038f6-2624-491d-ac8f-d743ad3ac097",
-      "firstName": "Aggie",
-      "lastName": "Alleyne",
-      "email": "aalleynel@cbsnews.com",
-      "gender": "Male",
-      "address": "4 Oneill Hill",
-      "image": "https://robohash.org/adkhissi55.png?size=100x100&set=set4",
-      "account": {
-        "accountNumber": "78569874514658",
-        "type": "Savings",
-        "balance": 22000
-      }
-    },
-    {
       "id": "ed137d8d-87e0-4ed2-8d76-7ac58e16166f",
       "firstName": "Jock",
       "lastName": "Skilbeck",
@@ -334,173 +264,6 @@
         "accountNumber": "78569874516658",
         "type": "Savings",
         "balance": 24000
-      }
-    },
-    {
-      "id": "afb56e94-4f51-4902-a785-379af91db426",
-      "firstName": "Trace",
-      "lastName": "Kinghorne",
-      "email": "tkinghorneo@altervista.org",
-      "gender": "Male",
-      "address": "324 Corry Court",
-      "image": "https://robohash.org/adkhissi58.png?size=100x100&set=set7",
-      "account": {
-        "accountNumber": "78569874517658",
-        "type": "Checking",
-        "balance": 25000
-      }
-    },
-    {
-      "id": "17398480-adcf-4b7c-ae3c-9748a0618f45",
-      "firstName": "Shantee",
-      "lastName": "Jensen",
-      "email": "sjensenp@nifty.com",
-      "gender": "Female",
-      "address": "14 Calypso Hill",
-      "image": "https://robohash.org/adkhissi59.png?size=100x100&set=set8",
-      "account": {
-        "accountNumber": "78569874518658",
-        "type": "Savings",
-        "balance": 26000
-      }
-    },
-    {
-      "id": "f4ae2202-4106-4ca1-9d43-c7faef4a48a8",
-      "firstName": "Peg",
-      "lastName": "Hatherall",
-      "email": "phatherallq@tripod.com",
-      "gender": "Female",
-      "address": "5 Scoville Hill",
-      "image": "https://robohash.org/adkhissi60.png?size=100x100&set=set1",
-      "account": {
-        "accountNumber": "78569874519658",
-        "type": "Checking",
-        "balance": 27000
-      }
-    },
-    {
-      "id": "1a10257c-9ea4-42b6-adec-1700abf84458",
-      "firstName": "Gene",
-      "lastName": "Devonish",
-      "email": "gdevonishr@uiuc.edu",
-      "gender": "Female",
-      "address": "9299 Erie Junction",
-      "image": "https://robohash.org/adkhissi61.png?size=100x100&set=set2",
-      "account": {
-        "accountNumber": "78569874510658",
-        "type": "Savings",
-        "balance": 28000
-      }
-    },
-    {
-      "id": "829faa61-7264-446b-96ef-47f26c037fb4",
-      "firstName": "Davie",
-      "lastName": "Town",
-      "email": "dtowns@e-recht24.de",
-      "gender": "Male",
-      "address": "69915 Messerschmidt Circle",
-      "image": "https://robohash.org/adkhissi62.png?size=100x100&set=set3",
-      "account": {
-        "accountNumber": "78569874511658",
-        "type": "Checking",
-        "balance": 29000
-      }
-    },
-    {
-      "id": "a0299050-7a99-4eab-8d42-d0bce08f0e85",
-      "firstName": "Vale",
-      "lastName": "Gallier",
-      "email": "vgalliert@blog.com",
-      "gender": "Male",
-      "address": "3 Anniversary Court",
-      "image": "https://robohash.org/adkhissi63.png?size=100x100&set=set4",
-      "account": {
-        "accountNumber": "78569874512658",
-        "type": "Savings",
-        "balance": 30000
-      }
-    },
-    {
-      "id": "4fe0c9f4-fdf8-4bc3-89f3-3fcd5431e607",
-      "firstName": "",
-      "lastName": "",
-      "email": "",
-      "address": "",
-      "gender": "",
-      "image": "https://robohash.org/73dc06b8-3aa2-4bd8-bd7c-27506b870968.png?size=100x100&set=set1",
-      "account": {
-        "accountNumber": "29198547131270",
-        "type": "",
-        "balance": ""
-      }
-    },
-    {
-      "id": "62b1e8b6-4647-4e8b-9cab-c261d925b1c1",
-      "firstName": "TEST",
-      "lastName": "TEST",
-      "email": "TEST@gmail.com",
-      "address": "HAY TEST, Country TEST",
-      "gender": "Male",
-      "image": "https://robohash.org/1a30a5bb-b5a7-454d-b6df-b2b22638cfac.png?size=100x100&set=set1",
-      "account": {
-        "accountNumber": "40154522647528",
-        "type": "Checking"
-      }
-    },
-    {
-      "id": "c783aa52-50c3-4829-9d5f-9aba5c1ecce5",
-      "firstName": "test",
-      "lastName": "test",
-      "email": "1999dkhissi@gmail.com",
-      "address": "test",
-      "gender": "Male",
-      "image": "https://robohash.org/efabc083-a4b7-46e3-90d9-7399e286d8c0.png?size=100x100&set=set1",
-      "account": {
-        "accountNumber": "20426681439331",
-        "type": "Savings",
-        "balance": null
-      }
-    },
-    {
-      "id": "1695c39b-a936-44b9-b354-fc9c60cb67a8",
-      "firstName": "test",
-      "lastName": "test",
-      "email": "texst",
-      "address": "text",
-      "gender": "Male",
-      "image": "https://robohash.org/392b6dfa-ee08-41ec-ad91-683c4f6aad23.png?size=100x100&set=set1",
-      "account": {
-        "accountNumber": "42979942510333",
-        "type": "Checking",
-        "balance": null
-      }
-    },
-    {
-      "id": "4581d03e-a605-4de9-b5e4-bb614ca0fb37",
-      "firstName": "TEST",
-      "lastName": "TEST",
-      "email": "TEST@email.com",
-      "address": "TEST Country, TEST City",
-      "gender": "Male",
-      "image": "https://robohash.org/ae0b2949-8939-417e-bdba-8eee9cc65da4.png?size=100x100&set=set1",
-      "account": {
-        "accountNumber": "56996336986437",
-        "type": "Checking",
-        "balance": 7888
-      }
-    },
-    {
-      "id": "b79597a3-43bc-4b71-b214-7cde7c375988",
-      "firstName": "Ayoub",
-      "lastName": "Dkhissi",
-      "email": "1999dkhissi@gmail.com",
-      "address": "Hay Laazifat Rue 89 Tangier",
-      "gender": "Male",
-      "image": "https://robohash.org/6de34986-6d59-4181-804e-ef9cfac2079e.png?size=100x100&set=set1",
-      "account": {
-        "accountNumber": "36128344042457",
-        "type": "Checking",
-        "balance": 4000
       }
     }
   ]

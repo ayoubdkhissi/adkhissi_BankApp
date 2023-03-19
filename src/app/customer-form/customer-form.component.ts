@@ -19,6 +19,8 @@ export class CustomerFormComponent implements OnInit {
 
   public customerForm: FormGroup;
 
+  public isLoading: boolean = false;
+
   public customer?: Customer;
 
   constructor(private route: ActivatedRoute,
@@ -103,6 +105,8 @@ export class CustomerFormComponent implements OnInit {
 
   submit() {
     console.log(this.customerForm.value);
+
+    this.isLoading = true;
 
     if (!this.customerForm.valid)
       return;
