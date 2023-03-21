@@ -26,7 +26,6 @@ export class PieChartComponent implements OnInit, OnChanges {
     this.canvas = document.getElementById(chartId);
 
     if (this.canvas) {
-      const context = this.canvas.getContext('2d');
       this.ctx = this.canvas.getContext("2d");
       this.chartPie = new Chart(this.ctx, {
         type: 'pie',
