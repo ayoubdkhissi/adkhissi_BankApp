@@ -1,23 +1,38 @@
-<div class="flex bg-pink-800">
+<div class="flex items-center justify-between h-fit bg-pink-800 px-4 py-3 md:py-4">
+    <!-- Logo -->
     <img routerLink="/" src="https://www.sqli.com/themes/custom/sqli_theme/dist/images/logo-text-animated.svg"
-        alt="SQLI Logo" class="h-16 p-2 cursor-pointer">
+        alt="SQLI Logo" class="h-8 md:h-14 cursor-pointer">
 
-
-    <!-- search bar -->
-    <ul class="flex justify-between items-center p-4 w-1/3 ml-5 text-xl text-white font-bold ">
+    <!-- Navigation links -->
+    <ul
+        class="hidden md:flex md:items-center md:justify-between md:w-1/3 md:ml-5 md:text-xl md:text-white md:font-bold">
         <li routerLink="/" class="cursor-pointer hover:text-black">Customers</li>
-        <li routerLink="addCustomer" class="cursor-pointer hover:text-black">Add Customer</li>
-        <li routerLink="dashboard" class="cursor-pointer hover:text-black">Dashboard</li>
+        <li routerLink="addCustomer" class="cursor-pointer hover:text-black md:ml-4">Add Customer</li>
+        <li routerLink="dashboard" class="cursor-pointer hover:text-black md:ml-4">Dashboard</li>
     </ul>
 
-
-
-    <!-- username -->
-    <div class="flex  ml-auto mr-3 w-fit  text-white">
-        <div class="flex justify-center items-center cursor-pointer hover:text-black">
-            <img src="../../assets/img/adkhisi.jpg" alt="User" class="h-14 rounded-full p-2">
-            <p class="font-bold">Ayoub Dkhissi</p>
+    <!-- Username -->
+    <div class="flex ml-auto mr-3 items-center text-white">
+        <div class="flex items-center cursor-pointer hover:text-black">
+            <img src="../../assets/img/adkhisi.jpg" alt="User" class="h-8 md:h-14 rounded-full p-2">
+            <p class="hidden md:block font-bold md:ml-2">Ayoub Dkhissi</p>
         </div>
     </div>
 
+    <!-- Hamburger menu (for smaller screens) -->
+    <button type="button" class="md:hidden text-white focus:outline-none">
+        <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+            <path v-if="!isOpen" fill-rule="evenodd" clip-rule="evenodd"
+                d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+            <path v-if="isOpen" fill-rule="evenodd" clip-rule="evenodd"
+                d="M13.41 12l3.3-3.3a1 1 0 0 0-1.42-1.4L12 10.57l-3.3-3.3a1 1 0 1 0-1.4 1.42L10.57 12l-3.3 3.3a1 1 0 1 0 1.4 1.4L12 13.43l3.3 3.3a1 1 0 1 0 1.42-1.4L13.43 12z" />
+        </svg>
+    </button>
+
+    <!-- Responsive navigation links (for smaller screens) -->
+    <div class="md:hidden absolute top-0 left-0 w-full bg-pink-800 pt-3 pb-2">
+        <a routerLink="/" class="block text-white font-bold py-2 px-4 hover:text-black">Customers</a>
+        <a routerLink="addCustomer" class="block text-white font-bold py-2 px-4 hover:text-black">Add Customer</a>
+        <a routerLink="dashboard" class="block text-white font-bold py-2 px-4 hover:text-black">Dashboard</a>
+    </div>
 </div>
