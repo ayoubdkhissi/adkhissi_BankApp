@@ -14,6 +14,7 @@ export class DashboardComponent implements OnInit, OnChanges {
 
   public chart1Data?: ChartPieData;
   public chart2Data?: ChartPieData;
+  public totalMoney?: number;
 
   constructor(private customerService: CustomerService) { }
 
@@ -85,6 +86,10 @@ export class DashboardComponent implements OnInit, OnChanges {
             data2Name: 'Checking Balance',
             data2Value: CheckingStats.totalBalance
           }
+
+
+          // Total money
+          this.totalMoney = this.chart2Data.data1Value + this.chart2Data.data2Value;
         }
       })
   }
